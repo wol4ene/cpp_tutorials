@@ -14,6 +14,9 @@ using namespace std;
  *
  * Additionally, to avoid issues with dynamic memory when something like this is done: a=a,
  * the operator much check for 'this' != &rhs.
+ *
+ * Syntax:
+ *   T& operator=(const T& rhs);
  */
 
 class Foo {
@@ -25,7 +28,7 @@ class Foo {
         Foo(void);
         Foo(int x, int y, int z);
         void print(void);
-        Foo& operator=(const Foo& f1);
+        Foo& operator=(const Foo& rhs);
 };
 
 Foo::Foo(void) : age(21), weight(155) {
