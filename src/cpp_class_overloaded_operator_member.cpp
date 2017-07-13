@@ -31,8 +31,8 @@ class Acct {
         Acct(void) : dollars(0), cents(0) { };
         int get_dollars(void) const { return dollars; };
         int get_cents(void) const { return cents; };
-        const Acct operator+(const Acct& a1) const;
-        bool operator==(const Acct& a1) const;
+        const Acct operator+(const Acct& rhs) const;
+        bool operator==(const Acct& rhs) const;
 };
 
 /**
@@ -40,10 +40,10 @@ class Acct {
  * Note this is a dumb function and doesn't adjust dollars once cents goes above 100,
  * but is just used for illustrative purposes
  */
-const Acct Acct::operator+(const Acct& a1) const
+const Acct Acct::operator+(const Acct& rhs) const
 {
-   int sumDollars = dollars + a1.get_dollars();
-   int sumCents = cents + a1.get_cents();
+   int sumDollars = dollars + rhs.get_dollars();
+   int sumCents = cents + rhs.get_cents();
 
    return Acct(sumDollars, sumCents);
 }
@@ -51,10 +51,10 @@ const Acct Acct::operator+(const Acct& a1) const
 /** 
  * Overloaded '==' operator.  Simply tests if two Acct objects are equivalent
  */
-bool Acct::operator==(const Acct& a1) const 
+bool Acct::operator==(const Acct& rhs) const 
 {
-    return ( (cents == a1.get_cents()) &&
-             (dollars == a1.get_dollars()));
+    return ( (cents == rhs.get_cents()) &&
+             (dollars == rhs.get_dollars()));
 }
 
 int main() 
@@ -62,7 +62,10 @@ int main()
     /* Create two Acct objects */
     Acct acct1(24,7), acct2(5,9);
 
-    /* sum them up to a new object should be 29 dollars, 16 cents  */
+    /* sum them up to a new object should be 29 dollars, 16 cents
+     * this will invoke the overloaded '+' operator on the 'acct1' object
+     * with 'acct2' serving as it's argument
+     */
     Acct acct3 = acct1 + acct2;
 
     cout << "Acct3.dollars = " << acct3.get_dollars() << endl;
