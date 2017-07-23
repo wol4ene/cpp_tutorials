@@ -10,4 +10,4 @@ These tutorials assume previous experience in other programming languages, so th
 
 What these tutorials are NOT
 ----------------------------
-The goal of these tutorials is to show as little code as possible to highlight the concept being discussed.  As such, these tutorials are by no means production-level code.  Many of the examples are contrived to highlight a technique or concept, and as such may omit unnecessary-for-the-purpose-of-illustration things, such as constructors or destructors when not needed in the example.  Additionally, safe and defensive coding practices such as error-handling and proper bounds-checking is not included for brevity.
+The goal of these tutorials is to show as little code as possible to highlight the concept being discussed.  As such, these tutorials are by no means production-level code.  Many of the examples are contrived to highlight a technique or concept, and as such may omit unnecessary-for-the-purpose-of-illustration things, such as constructors or destructors when not needed in the example.  Additionally, safe and defensive coding practices such as error-handling and proper bounds-checking are not included for brevity.
