@@ -1,8 +1,3 @@
-/**************************
- C++ Tutorials
- Author: Jonathan Price
-**************************/
-
 What are these tutorials?
 -------------------------
 Contained here are C++ tutorials I have written to provide an overview of the C++ language.  
