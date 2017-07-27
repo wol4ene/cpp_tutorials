@@ -56,7 +56,7 @@ int main(void) {
 
     /* Player can only call it's own member func, it is the parent class! */
     cout << "Player Health: " << player.get_health() << endl;
-    cout << "Player Strength: " << player.get_strength() << endl;
+    // cout << "Player Strength: " << player.get_strength() << endl;  ILLEGAL!
 
     return 0;
 }

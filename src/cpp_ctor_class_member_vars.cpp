@@ -20,10 +20,13 @@ class Bar {
 class Foo {
     private:
         int height;
-        Bar bar;
+        Bar member;
     public:
-        /* Here in the ctor for Foo, call bar(5) */
-        Foo(void) : height(5), bar(5) { cout << "in def ctor for Foo" << endl; };
+        /* Here in the ctor for Foo, call member(5)
+         * The notation is an invocation of the ctor of the Bar class, similar to
+         * how one would declare a variable 'member' of type 'Bar': Bar member(5);
+         */
+        Foo(void) : height(5), member(5) { cout << "in def ctor for Foo" << endl; };
 };
 
 int main() 
@@ -36,7 +39,7 @@ int main()
 
 /* Alternatively, this would be Foo's ctor if defined outside of the class */
 #ifdef FALSE
-Foo::Foo(void) : height(5), bar(5) {
+Foo::Foo(void) : height(5), member(5) {
     cout << "In default ctor for Foo" << endl;
 };
 #endif

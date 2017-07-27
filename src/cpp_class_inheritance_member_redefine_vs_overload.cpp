@@ -40,7 +40,7 @@ int main(void) {
     foo1.printMsg();
 
     /* Square can call the printMsg since it inherits it */
-    foo1.printMsg();
+    foo2.printMsg();
 
     /* Square can call the redefined func and get Square's definition */
     foo2.toRedef();
@@ -51,7 +51,7 @@ int main(void) {
     /* Square can call the overloaded func and get Square's definition */
     foo2.toOverl(5);
 
-    /* And it can also call the base class's definition, again using scope-resolution */
+    /* And Square can also call the base class's definition, again using scope-resolution */
     foo2.Shape::toOverl();
 
     return 0;
