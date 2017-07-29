@@ -26,6 +26,8 @@ Testing/Compile Environment
 All files compile with no errors/warnings on the the following environment:
 
 OS: Ubuntu 16.04 LTS
+
 GCC:  gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4)
+
 Compile flags: "-Wall -std=c++11"
    
