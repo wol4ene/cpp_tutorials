@@ -30,7 +30,7 @@ void Rectangle::func1(void) {
 
 /* New const function, notice that const appears before opening  bracket */
 void Rectangle::func2(void) const {
-    width = 5;                           /* ILLEGAL - compiler warning! */
+    // width = 5;                           /* ILLEGAL - compiler warning! */
     cout << "width: " << width << endl;  /* legal, not modifying */
 };
 
