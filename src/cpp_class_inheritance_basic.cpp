@@ -5,7 +5,7 @@ using namespace std;
  * Inheritance is the process by which a new class, a derived class, is created
  * from another class, the base class.  
  *
- * The derived class inherits all the member variables and ordinary member 
+ * The derived class inherits all the member variables and public member 
  * functions of the base class.
  *
  * However, derived class CANNOT access private members of base class by name,
